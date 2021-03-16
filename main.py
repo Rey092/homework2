@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
 
 def parse_cookie(query: str) -> dict:
-    return {}
+    return dict(parser.parse_qsl(query.replace(';', '&')))
 
 
 if __name__ == '__main__':
